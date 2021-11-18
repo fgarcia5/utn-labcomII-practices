@@ -1,0 +1,73 @@
+/* Declaro variables */
+:root {
+    --var-color-blue: #1818c5;
+    --var-color-turquoise: #00d4ff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, var(--var-color-blue) 0%, var(--var-color-turquoise) 100%);
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 25px;
+    padding: 50px;
+    box-shadow: 5px 5px 10px 1px #000;
+    text-align: center;
+    margin: 20px;
+}
+
+.form-container .item-form {
+    margin: 20px 0;
+}
+.form-container .item-form.item-form-buttons {
+    margin-top: 30px;
+}
+
+.form-container .item-form input {
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.form-container .item-form input:focus {
+    border-color: var(--var-color-turquoise);
+    outline: none !important;
+}
+
+.form-container .loading {
+    display: none;
+}
+
+button.btn-form-login {
+    background-color: var(--var-color-turquoise);
+    padding: 10px;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 10px;
+    margin: 0 6px;
+}
+
+button.btn-form-login:hover {
+    background-color: var(--var-color-blue);
+    cursor: pointer;
+}
+
+/* Media query para dispositivos móviles */
+@media screen and (max-width: 480px) {
+    .form-container .item-form label {
+        display: block;
+    }
+}
